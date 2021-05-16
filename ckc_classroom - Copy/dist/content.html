@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./../ckeditor/ckeditor.js"></script>
+    <script src="./../ckfinder/ckfinder.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+    <title>Detail</title>
+
+</head>
+<body>
+    <div class="container">
+      <br>
+      <!-- Nav tabs -->
+    
+        <ul  class="nav nav-tabs justify-content-center " role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#bangtin">Bảng tin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#baitap">Bài tập</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#diendan">Diễn đàn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#thanhvien">Thành viên</a>
+          </li>
+        </ul>
+     
+     
+    
+       <div class="tab-content">
+
+        <div id="bangtin" class="container tab-pane active"><br>
+          <div class="container">
+      
+            <div class="row">
+              <div class="col-sm-2"></div>
+    
+              <div style="padding: 0;" class="col-sm-8">
+                
+                  <div style="position: relative; text-align: center;color: white;">
+                    <img src="img/Honors.jpg" style="width: 100%;margin-bottom: 2%;" alt="">
+                    <div style="font-size: 2.25rem;font-weight: 500; position: absolute; top: 8px; left: 16px; border-radius: 4px;" class="top-left">CĐTH18A-KTPM</div> 
+                  </div>
+               
+                <div class="container">
+                  <div class="row">
+                    <div style="padding: 0" class="col-sm-6">
+                      <button type="button" style="margin-bottom: 2%;"class="btn btn-outline-dark" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i> Bài tập thiếu</button>
+                    </div>
+                    <div style="padding: 0;" class="col-sm-6">
+                      <button type="button" style="margin-bottom: 2%; float:right"class="btn btn-dark" onclick="clickPlus()"><i class="fa fa-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                            <!-- <h5 class="modal-title">Thêm nội dung</h5>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                          </div>
+                          <!-- Modal body -->
+                            <!-- <label for="content">Thêm nội dung</label>
+                            <textarea name="content" id="contents"></textarea> -->
+                          <!-- Modal footer -->
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Đăng</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                <div class="post">
+                  <div style="margin-bottom: 2%; display:none; width: 100%;" class="card bg-light text-dark" id="ckeditor">
+                      <textarea name="content" id="contents"></textarea>
+                        <button style="float: right" class="btn btn-light" onclick="clickPlus()" type="submit"><i class="fa fa-paper-plane"></i></button>
+                  </div>
+                </div>
+
+                    <div style="margin-bottom: 2%;" class="card bg-light text-dark">
+                        <div class="card-body">Bài 1</div>
+                       
+                    </div>
+                    <div style="margin-bottom: 2%;" class="card bg-light text-dark">
+                        <div class="card-body">Chúng ta là một gia đình</div>
+                        <div class="card-footer">
+                            <img style="vertical-align: middle; width: 40px;height: 40px;border-radius: 50%;" src="./img/avatar.jpg" alt="Avatar" class="avatar">&nbsp &nbsp
+                            <input style="width: 57%; border: solid 1px black; border-radius: 63px;" type="text">&nbsp &nbsp
+                            <button class="btn btn-light"><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                       
+                    </div>
+                    <div style="margin-bottom: 2%;" class="card bg-light text-dark">
+                        <div class="card-body">Bài 1</div>
+                       
+                    </div>
+                    <div style="margin-bottom: 2%;" class="card bg-light text-dark">
+                        <div class="card-body">Bài 3</div>
+                       
+                    </div> 
+                </div>
+              </div>
+
+              <div class="col-sm-2">
+                
+              </div>
+            </div>
+        </div>
+    <!-- BÀI TẬP LỚN -->
+        <div style="padding: 0" id="baitap" class="container tab-pane fade"><br>
+        <!-- START Phần tạo bài tập -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal_bt">
+               <i class="fa fa-plus"></i>&nbsp Tạo
+              </button>  
+              <!-- The Modal -->
+              <div class="modal" id="myModal_bt">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                              <label for="tieude">Tiêu đề</label>
+                              <input type="tieude" class="form-control" id="email" placeholder="Tiêu đề" name="tieude">
+                            </div>
+                            <div class="form-group">
+                              <label for="diem">Điểm:</label>
+                              <input type="diem" class="form-control" id="diem"  name="diem">
+                            </div>
+                            <div class="form-group">
+                              <label for="ngaydenhan">Ngày đến hạn:</label>
+                              <input type="datetime-local" class="form-control" id="ngaydenhan"  name="ngaydenhan">
+                            </div>
+                            <div class="form-group">
+                                <label for="link">Link:</label>
+                                <!-- <input type="huongdan" class="form-control" id="huongdan" placeholder="Không bắt buộc" name="huongdan"> -->
+                                <textarea class="form-control" placeholder="Không bắt buộc" rows="5" id="link"></textarea>
+                              </div>
+                            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                          </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Đăng</button>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+        <!--  END Phần tạo bài tập -->
+
+        <!-- START Phần bài tập  -->
+            <div style="margin-top: 2%;" class="card bg-light text-dark">
+                <div class="card-body">
+                    <img style="vertical-align: middle; width: 40px;height: 40px;border-radius: 50%;" src="./img/baitap.png" alt="baitap" class="baitap">&nbsp &nbsp Bài tập 1
+                </div>
+            </div>
+        <!--  END Phần bài tập  -->
+        </div>
+
+
+
+
+     <!-- BÀI TẬP LỚN -->
+        
+
+
+
+        <!-- --------------DIỄN ĐÀN------------------ -->
+        <div id="diendan" class="container tab-pane fade"><br>
+         
+            <div class="container">
+            <section class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                            <div class="page-wrapper">
+                               
+    
+                                <div class="blog-list clearfix">
+                                    <div class="blog-box row">
+                                        <div class="col-md-4">
+                                            <div class="post-media">
+                                                <a href="./diendan/tech-single.html" title="">
+                                                    <img src="./assets/diendan/upload/author.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect"></div>
+                                                </a>
+                                            </div><!-- end media -->
+                                        </div><!-- end col -->
+    
+                                        <div class="blog-meta big-meta col-md-8">
+                                            <h4><a href="./diendan/tech-single.html" title="">Top 10 phone applications and 2017 mobile design awards</a></h4>
+                                            <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Gadgets</a></small>
+                                            <small><a href="./diendan/tech-single.html" title="">21 July, 2017</a></small>
+                                            <small><a href="./diendan/tech-author.html" title="">by Matilda</a></small>
+                                            <small><a href="./diendan/tech-single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+    
+                                    <hr class="invis">
+    
+                                    <div class="blog-box row">
+                                        <div class="col-md-4">
+                                            <div class="post-media">
+                                                <a href="./diendan/tech-single.html" title="">
+                                                    <img src="./assets/diendan/upload/tech_blog_02.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect"></div>
+                                                </a>
+                                            </div><!-- end media -->
+                                        </div><!-- end col -->
+    
+                                        <div class="blog-meta big-meta col-md-8">
+                                            <h4><a href="./diendan/tech-single.html" title="">A device you can use both headphones and usb</a></h4>
+                                            <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Technology</a></small>
+                                            <small><a href="./diendan/tech-single.html" title="">21 July, 2017</a></small>
+                                            <small><a href="./diendan/tech-author.html" title="">by Matilda</a></small>
+                                            <small><a href="./diendan/tech-single.html" title=""><i class="fa fa-eye"></i> 4412</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+    
+                                    <hr class="invis">
+    
+                                    <div class="blog-box row">
+                                        <div class="col-md-4">
+                                            <div class="post-media">
+                                                <a href="./diendan/tech-single.html" title="">
+                                                    <img src="./assets/diendan/upload/tech_blog_03.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect"></div>
+                                                </a>
+                                            </div><!-- end media -->
+                                        </div><!-- end col -->
+    
+                                        <div class="blog-meta big-meta col-md-8">
+                                            <h4><a href="./diendan/tech-single.html" title="">Two brand new laptop models from ABC computer</a></h4>
+                                            <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Development</a></small>
+                                            <small><a href="./diendan/tech-single.html" title="">20 July, 2017</a></small>
+                                            <small><a href="./diendan/tech-author.html" title="">by Matilda</a></small>
+                                            <small><a href="./diendan/tech-single.html" title=""><i class="fa fa-eye"></i> 2313</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+    
+                                    <hr class="invis">
+    
+                                   
+                                    <hr class="invis">
+    
+                                    <div class="blog-box row">
+                                        <div class="col-md-4">
+                                            <div class="post-media">
+                                                <a href="./diendan/tech-single.html" title="">
+                                                    <img src="./assets/diendan/upload/tech_blog_04.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect"></div>
+                                                </a>
+                                            </div><!-- end media -->
+                                        </div><!-- end col -->
+    
+                                        <div class="blog-meta big-meta col-md-8">
+                                            <h4><a href="./diendan/tech-single.html" title="">Applications for taking photos of nature in your mobile phones</a></h4>
+                                            <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Design</a></small>
+                                            <small><a href="./diendan/tech-single.html" title="">19 July, 2017</a></small>
+                                            <small><a href="./diendan/tech-author.html" title="">by Matilda</a></small>
+                                            <small><a href="./diendan/tech-single.html" title=""><i class="fa fa-eye"></i> 4441</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+    
+                                    <hr class="invis">
+    
+                                    <div class="blog-box row">
+                                        <div class="col-md-4">
+                                            <div class="post-media">
+                                                <a href="./diendan/tech-single.html" title="">
+                                                    <img src="./assets/diendan/upload/tech_blog_05.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect"></div>
+                                                </a>
+                                            </div><!-- end media -->
+                                        </div><!-- end col -->
+    
+                                        <div class="blog-meta big-meta col-md-8">
+                                            <h4><a href="./diendan/tech-single.html" title="">Say hello to colored strap models in smart hours</a></h4>
+                                            <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Materials</a></small>
+                                            <small><a href="./diendan/tech-single.html" title="">18 July, 2017</a></small>
+                                            <small><a href="./diendan/tech-author.html" title="">by Matilda</a></small>
+                                            <small><a href="./diendan/tech-single.html" title=""><i class="fa fa-eye"></i> 33312</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+    
+                                    <hr class="invis">
+    
+                                    <div class="blog-box row">
+                                        <div class="col-md-4">
+                                            <div class="post-media">
+                                                <a href="./diendan/tech-single.html" title="">
+                                                    <img src="./assets/diendan/upload/tech_blog_06.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect"></div>
+                                                </a>
+                                            </div><!-- end media -->
+                                        </div><!-- end col -->
+    
+                                        <div class="blog-meta big-meta col-md-8">
+                                            <h4><a href="./diendan/tech-single.html" title="">How about evaluating your old mobile phones in different ways?</a></h4>
+                                            <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Gadgets</a></small>
+                                            <small><a href="./diendan/tech-single.html" title="">17 July, 2017</a></small>
+                                            <small><a href="./diendan/tech-author.html" title="">by Matilda</a></small>
+                                            <small><a href="./diendan/tech-single.html" title=""><i class="fa fa-eye"></i> 4440</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+    
+                                    <hr class="invis">
+    
+                                    <div class="blog-box row">
+                                        <div class="col-md-4">
+                                            <div class="post-media">
+                                                <a href="./diendan/tech-single.html" title="">
+                                                    <img src="./assets/diendan/upload/tech_blog_07.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect"></div>
+                                                </a>
+                                            </div><!-- end media -->
+                                        </div><!-- end col -->
+    
+                                        <div class="blog-meta big-meta col-md-8">
+                                            <h4><a href="./diendan/tech-single.html" title="">Drinking coffee at the computer rests the spirit</a></h4>
+                                            <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Technology</a></small>
+                                            <small><a href="./diendan/tech-single.html" title="">16 July, 2017</a></small>
+                                            <small><a href="./diendan/tech-author.html" title="">by Matilda</a></small>
+                                            <small><a href="./diendan/tech-single.html" title=""><i class="fa fa-eye"></i> 4412</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+    
+                                    <hr class="invis">
+    
+                                    <div class="blog-box row">
+                                        <div class="col-md-4">
+                                            <div class="post-media">
+                                                <a href="./diendan/tech-single.html" title="">
+                                                    <img src="./assets/diendan/upload/tech_blog_08.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect"></div>
+                                                </a>
+                                            </div><!-- end media -->
+                                        </div><!-- end col -->
+    
+                                        <div class="blog-meta big-meta col-md-8">
+                                            <h4><a href="./diendan/tech-single.html" title="">If you are considering buying a new safe for your mobile phone, be sure to read this article</a></h4>
+                                            <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Reviews</a></small>
+                                            <small><a href="./diendan/tech-single.html" title="">15 July, 2017</a></small>
+                                            <small><a href="./diendan/tech-author.html" title="">by Matilda</a></small>
+                                            <small><a href="./diendan/tech-single.html" title=""><i class="fa fa-eye"></i> 44123</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+    
+                                    <hr class="invis">
+    
+                                    <div class="blog-box row">
+                                        <div class="col-md-4">
+                                            <div class="post-media">
+                                                <a href="./diendan/tech-single.html" title="">
+                                                    <img src="./assets/diendan/upload/tech_blog_09.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect"></div>
+                                                </a>
+                                            </div><!-- end media -->
+                                        </div><!-- end col -->
+    
+                                        <div class="blog-meta big-meta col-md-8">
+                                            <h4><a href="./diendan/tech-single.html" title="">Enjoy a summer with a colorful headset</a></h4>
+                                            <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Technology</a></small>
+                                            <small><a href="./diendan/tech-single.html" title="">14 July, 2017</a></small>
+                                            <small><a href="./diendan/tech-author.html" title="">by Matilda</a></small>
+                                            <small><a href="./diendan/tech-single.html" title=""><i class="fa fa-eye"></i> 2214</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+    
+                                    <hr class="invis">
+    
+                                    <div class="blog-box row">
+                                        <div class="col-md-4">
+                                            <div class="post-media">
+                                                <a href="./diendan/tech-single.html" title="">
+                                                    <img src="./assets/diendan/upload/tech_blog_10.jpg" alt="" class="img-fluid">
+                                                    <div class="hovereffect"></div>
+                                                </a>
+                                            </div><!-- end media -->
+                                        </div><!-- end col -->
+    
+                                        <div class="blog-meta big-meta col-md-8">
+                                            <h4><a href="./diendan/tech-single.html" title="">Google has developed a brand new algorithm. Forget all your knowledge!</a></h4>
+                                            <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus ac felis nec, maximus tempor odio.</p>
+                                            <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Gadgets</a></small>
+                                            <small><a href="./diendan/tech-single.html" title="">13 July, 2017</a></small>
+                                            <small><a href="./diendan/tech-author.html" title="">by Matilda</a></small>
+                                            <small><a href="./diendan/tech-single.html" title=""><i class="fa fa-eye"></i> 3331</a></small>
+                                        </div><!-- end meta -->
+                                    </div><!-- end blog-box -->
+                                </div><!-- end blog-list -->
+                            </div><!-- end page-wrapper -->
+    
+                            <hr class="invis">
+    
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <nav aria-label="Page navigation">
+                                        <ul class="pagination justify-content-start">
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">Next</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div><!-- end col -->
+                            </div><!-- end row -->
+                        </div><!-- end col -->
+    
+                       
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </section>
+        </div>
+    </div>
+      <!-- --------------DIỄN ĐÀN------------------ -->
+        
+        <!-- -------------THÀNH VIÊN-------------------- -->
+        <div id="thanhvien" class="container tab-pane fade"><br>
+            <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-2">
+                   
+                  </div>
+                  <div class="col-sm-8">
+                    <h3 style="border-bottom: 1.5px solid #000;margin-bottom: 4%;">Giáo viên</h3>
+                    
+                    <img style="vertical-align: middle; width: 40px;height: 40px;border-radius: 50%;" src="./img/avatar.jpg" alt="Avatar" class="avatar">&nbsp &nbsp
+                    <h4 style="display: inline-block; font-size:18px; font-family: sans-serif;margin-bottom: 5%">Như Huỳnh</h4>
+
+                    <p></p>
+                    <h3 style="border-bottom: 1.5px solid #000;margin-bottom: 4%">Sinh viên: 100</h3>
+                    <img style="vertical-align: middle; width: 40px;height: 40px;border-radius: 50%;" src="./img/avatar.jpg" alt="Avatar" class="avatar">&nbsp &nbsp
+                    <h4 style="display: inline-block; font-size:18px; font-family: sans-serif;">Như Huỳnh</h4>
+                    <hr>
+                    <img style="vertical-align: middle; width: 40px;height: 40px;border-radius: 50%;" src="./img/avatar.jpg" alt="Avatar" class="avatar">&nbsp &nbsp
+                    <h4 style="display: inline-block; font-size:18px; font-family: sans-serif;">Như Huỳnh</h4>
+                    <hr>
+                    <img style="vertical-align: middle; width: 40px;height: 40px;border-radius: 50%;" src="./img/avatar.jpg" alt="Avatar" class="avatar">&nbsp &nbsp
+                    <h4 style="display: inline-block; font-size:18px; font-family: sans-serif;">Như Huỳnh</h4>
+
+
+                  </div>
+                  <div class="col-sm-2">
+                    
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+    <!-- -------------THÀNH VIÊN-------------------- -->
+       
+        
+      </div>
+    </div>
+
+    
+  
+
+    
+</body>
+</html>
+<script>
+  // Replace the <textarea id="editor1"> with a CKEditor 4
+  // instance, using default configuration.
+//   CKEDITOR.replace( 'contents' );
+			 CKEDITOR.replace( 'contents',
+		{
+			filebrowserBrowseUrl : 'ckfinder/ckfinder.html',
+			filebrowserImageBrowseUrl : 'ckfinder/ckfinder.html?type=Images',
+			filebrowserFlashBrowseUrl : 'ckfinder/ckfinder.html?type=Flash',
+			filebrowserUploadUrl : 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+			filebrowserImageUploadUrl : 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+			filebrowserFlashUploadUrl : 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+		});
+</script>
+<script>
+var k =1
+function clickPlus() {
+    if(k==1)
+    { openEditor()
+        k=0
+    }
+    else{
+        closeEditor()
+        k=1
+    }
+}
+  function openEditor(){
+    let ck = document.getElementById('ckeditor');
+      ck.style.display = "inline-block"
+  }
+  function closeEditor(){
+    let ck = document.getElementById('ckeditor');
+      ck.style.display = "none"
+  }
+</script>
+
+<!-- ------------------------------------------------- -->
+<script src="./assets/diendan/js/jquery.min.js"></script>
+<script src="./assets/diendan/js/tether.min.js"></script>
+<script src="./assets/diendan/js/bootstrap.min.js"></script>
+<script src="./assets/diendan/js/custom.js"></script>
+<!-- <input style="width: 69%; border: solid 1px #969ea7; border-radius: 63px;" type="text">&nbsp &nbsp -->
+                            <!-- <button class="btn btn-light" type="submit"><i class="fa fa-paper-plane"></i></button> -->
